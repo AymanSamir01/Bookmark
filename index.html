@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-5 ">Bookmarker</h1>
+        <div class="content p-4">
+            <div class="text-center">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </div>
+            <label class="fw-semibold mb-1" for="bookmark"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <div class="entry field-name position-relative">
+                <input class="form-control mb-3" type="text" name="Name" placeholder="Bookmark Name" id="siteName">
+                <i class="fa-solid fa-circle-exclamation wrong-1"></i>
+                <i class="fa-solid fa-check correct-1"></i>
+            </div>
+            <label class="fw-semibold mb-1" for="siteUrl"><i class="fa-solid fa-link"></i> Site URL</label>
+            <div class="entry position-relative">
+                <input class="form-control mb-3" type="text" name="url" placeholder="Site URL" id="siteUrl">
+                <i class="fa-solid fa-circle-exclamation wrong-2"></i>
+                <i class="fa-solid fa-check correct-2"></i>
+            </div>
+            <button on id="submit" class="btn btn-danger opacity-75 d-block py-2 px-5 mb-1 mt-4 mx-auto">Submit</button>
+        </div>
+        <div class="modal modal-dialog-centered" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Site Name or Url is not valid, Please follow the rules below :</h4>
+                        <button id="btn-close" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <i class="fa-solid fa-angles-right me-2 text-danger"></i>
+                            <p class="d-inline-block">Site name must contain at least 3 characters .</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-angles-right me-2 text-danger"></i>
+                            <p class="d-inline-block">Site URL must be a valid one .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-hover text-center mt-4">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="contain">
+                <a href="" target="_blank"></a>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
