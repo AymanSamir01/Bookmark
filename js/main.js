@@ -70,22 +70,17 @@ function clear() {
 siteName.addEventListener("keyup", changeNameStyles);
 function changeNameStyles() {
   if (validationInputName()) {
-    document.querySelector(".entry .wrong-1").style.display = "none";
-    document.querySelector(".entry .correct-1").style.display = "block";
+    siteName.classList.replace("is-invalid", "is-valid");
   } else {
-    document.querySelector(".entry .correct-1").style.display = "none";
-    document.querySelector(".entry .wrong-1").style.display = "block";
+    siteName.classList.add("is-invalid");
   }
 }
 siteUrl.addEventListener("keyup", changeUrlStyles);
 function changeUrlStyles() {
   if (validationInputUrl()) {
-    document.querySelector(".entry .wrong-2").style.display = "none";
-    document.querySelector(".entry .correct-2").style.display = "block";
-    document.querySelector(".form-control:focus").style.border_color = "blue";
+    siteUrl.classList.replace("is-invalid", "is-valid");
   } else {
-    document.querySelector(".entry .correct-2").style.display = "none";
-    document.querySelector(".entry .wrong-2").style.display = "block";
+    siteUrl.classList.add("is-invalid");
   }
 }
 // validation siteName
