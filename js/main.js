@@ -11,7 +11,7 @@ if (JSON.parse(localStorage.getItem("websites")) != null) {
 }
 submit.addEventListener("click", addSite);
 function addSite() {
-  if (validationInputName() && validationInputUrl()) {
+  label: if (validationInputName() && validationInputUrl()) {
     var siteObject = {
       name: siteName.value,
       url: siteUrl.value,
@@ -20,9 +20,8 @@ function addSite() {
     var find = siteName.value;
     for (let i = 0; i < websites.length; i++) {
       if (websites[i].name == find) {
-        alert("this site already existed");
-        deleteItem(i);
-        break;
+        alert("Bookmark already existed");
+        break label;
       }
     }
     websites.push(siteObject);
